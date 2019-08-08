@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+    {%block content %}
+    <form action="results" method="POST">
+
+        {% csrf_token %}
+        <label>Name:</label> <input type="text" name="name" placeholder="Fullname" required/><br/>
+        <label>Age:</label> <input type="text" name="age" placeholder="Age in years" required /><br/>
+        <label>Sex: </label> <input type="text" name="sex" placeholder="input 'm' or 'f'" required/><br/>
+        <label>Height:</label> <input type="text" name="height" placeholder="Height in cm" required/><br/>
+        <label>Weight: </label><input type="text" name="weight" placeholder="Weight in Kg" required/><br/>
+        <label>Physical Level: </label><input type="text" value="1" name="physical"  required/><br/>
+
+        <input type="submit" value="Submit"/>
+    </form>
+    {% endblock content %}
